@@ -31,7 +31,7 @@ def get_json_files():
     files = [f for f in os.listdir(directory) if f.endswith('.json')]
     return jsonify(files)
 
-@app.route('/compare', methods=['POST'])
+@app.route('/compare', methods=['POST', 'GET'])
 def compare_images():
     if 'image' not in request.files:
         return jsonify({'error': 'No image file provided'}), 400
@@ -48,18 +48,11 @@ def compare_images():
         image.save(filepath)
 
         model_output = run.gold(filename, planogramType)
-        print(model_output)
-
-
-    # TODO: Add your comparison logic here
-
-    # For demonstration, return the received info
-    return jsonify({
-        'message': 'Received the following data',
-        'imageName': imageName,
-        'planogramType': planogramType,
-        'secureFilename': filename
-    }), 200
+        # print(model_output)
+        return jsonify(model_output), 200
+    
+    else:
+        return jsonify({'error': 'An error occurred'}), 500
     
 @app.route('/')
 def hello_world():

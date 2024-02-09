@@ -30,12 +30,6 @@ document.getElementById('planogramSelect').addEventListener('change', function()
     // You might want to replace this with actual planogram display logic
 });
 
-document.getElementById('compareButton').addEventListener('click', function() {
-    // Implement your comparison logic here
-    // This is a placeholder for demonstration
-    document.getElementById('resultsDisplay').textContent = 'Comparison Results...';
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     fetch('http://127.0.0.1:5000/get-json-files')  // Adjust the URL to match your Flask server
     .then(response => response.json())
@@ -49,25 +43,39 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error:', error));
 });
 
-document.getElementById('compareButton').addEventListener('click', function() {
+document.getElementById('compareButton').addEventListener('click', function(event) {
+    event.preventDefault();
+    
     var formData = new FormData();
     var imageFile = document.getElementById('imageUpload').files[0];
     var planogramType = document.getElementById('planogramSelect').value;
 
-    // Append the image file and planogram type to formData
     formData.append('image', imageFile);
-    formData.append('imageName', imageFile.name); // Assuming you want the name of the file
+    formData.append('imageName', imageFile.name); // Assuming you also want to send the image name
     formData.append('planogramType', planogramType);
 
-    // Replace '/compare' with your Flask endpoint
-    fetch('http://127.0.0.1:5000/compare', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
+    try {
+        const response = fetch('http://127.0.0.1:5000/compare', {
+            method: 'POST',
+            body: formData,
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = response.json();
+        console.log("111111111111111111111111111111111111")
         console.log(data);
-        // Handle response data
-    })
-    .catch(error => console.error('Error:', error));
+        const accuracyData = data.accuracy[0];
+        const resultsElement = document.getElementById('resultsDisplay');
+        resultsElement.innerHTML = `
+            <p>Accuracy: ${accuracyData.accuracy}</p>
+            <p>Total: ${accuracyData.total}</p>
+            <p>Matched Count: ${accuracyData.matched_count}</p>
+            <p>Missing Count: ${accuracyData.missing_count}</p>
+            <p>Misplaced Count: ${accuracyData.misplaced_count}</p>
+        `;
+        // Now, display your data as needed
+    } catch (error) {
+        console.error('Error:', error);
+    }
 });
