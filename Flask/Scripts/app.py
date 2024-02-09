@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 import os
@@ -43,16 +43,22 @@ def compare_images():
     if image.filename == '':
         return jsonify({'error': 'No selected file'})
     if image:
-        filename = secure_filename(imageName)
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        # filename = secure_filename(imageName)
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], imageName)
         image.save(filepath)
 
-        model_output = run.gold(filename, planogramType)
-        # print(model_output)
+        model_output = run.gold(imageName, planogramType)
+        print(model_output)
         return jsonify(model_output), 200
     
     else:
         return jsonify({'error': 'An error occurred'}), 500
+    
+@app.route('/get-json', methods=['GET'])
+def get_json():
+    directory = "./"  # Update this path to where your JSON file is stored
+    filename = "model_output.json"  # Update this to your JSON file's name
+    return send_from_directory(directory, filename, as_attachment=True)
     
 @app.route('/')
 def hello_world():

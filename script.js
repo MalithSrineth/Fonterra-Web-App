@@ -43,39 +43,69 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error:', error));
 });
 
-document.getElementById('compareButton').addEventListener('click', function(event) {
+document.getElementById('compareButton').addEventListener('click',  async function (event) {
+    
     event.preventDefault();
     
     var formData = new FormData();
     var imageFile = document.getElementById('imageUpload').files[0];
     var planogramType = document.getElementById('planogramSelect').value;
 
+    console.log(imageFile);
+    console.log(planogramType);
+
+    // console.log("Hello");
+
     formData.append('image', imageFile);
     formData.append('imageName', imageFile.name); // Assuming you also want to send the image name
     formData.append('planogramType', planogramType);
 
-    try {
-        const response = fetch('http://127.0.0.1:5000/compare', {
+    const response = await fetch('http://127.0.0.1:5000/compare', {
             method: 'POST',
             body: formData,
         });
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = response.json();
-        console.log("111111111111111111111111111111111111")
-        console.log(data);
+
+    // try {
+    //     const response = await fetch('http://127.0.0.1:5000/compare', {
+    //         method: 'POST',
+    //         body: formData,
+    //     });
+    //     if (!response.ok) {
+    //         throw new Error('Network response was not ok');
+    //     }
+    //     const data = await response.json();
+    //     console.log("111111111111111111111111111111111111")
+    //     console.log(data);
+    //     const accuracyData = data.accuracy[0];
+    //     const resultsElement = document.getElementById('resultsDisplay');
+    //     resultsElement.innerHTML = `
+    //         <p>Accuracy: ${accuracyData.accuracy}</p>
+    //         <p>Total: ${accuracyData.total}</p>
+    //         <p>Matched Count: ${accuracyData.matched_count}</p>
+    //         <p>Missing Count: ${accuracyData.missing_count}</p>
+    //         <p>Misplaced Count: ${accuracyData.misplaced_count}</p>
+    //     `;
+    //     // Now, display your data as needed
+    // } catch (error) {
+    //     console.log(error)
+    //     console.error('Error:', error);
+    // }
+});
+
+document.getElementById('showResults').addEventListener('click', function() {
+    fetch('http://127.0.0.1:5000/get-json')  // Adjust the URL to match your Flask server
+    .then(response => response.json())
+    .then(data => {
         const accuracyData = data.accuracy[0];
+        console.log(data);
         const resultsElement = document.getElementById('resultsDisplay');
         resultsElement.innerHTML = `
-            <p>Accuracy: ${accuracyData.accuracy}</p>
-            <p>Total: ${accuracyData.total}</p>
-            <p>Matched Count: ${accuracyData.matched_count}</p>
-            <p>Missing Count: ${accuracyData.missing_count}</p>
-            <p>Misplaced Count: ${accuracyData.misplaced_count}</p>
+             <p>Accuracy: ${accuracyData.accuracy}</p>
+             <p>Total: ${accuracyData.total}</p>
+             <p>Matched Count: ${accuracyData.matched_count}</p>
+             <p>Missing Count: ${accuracyData.missing_count}</p>
+             <p>Misplaced Count: ${accuracyData.misplaced_count}</p>
         `;
-        // Now, display your data as needed
-    } catch (error) {
-        console.error('Error:', error);
-    }
+    })
+    .catch(error => console.error('Error:', error));
 });
