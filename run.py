@@ -40,10 +40,13 @@ def gold(input_file, planogram_type) -> (str):
     print("\nModel is Running...\n")
     run = ProductRecognition(run_name, model_name)
 
+<<<<<<< HEAD
     print('printing run\n')
 
     print(run)
 
+=======
+>>>>>>> 39cb21033c2c1a9aed639d074fa8a589b7a5c2cd
     with open(f'static/Uploads/{input_file}', 'rb') as f:
         img = f.read()
 
@@ -53,9 +56,12 @@ def gold(input_file, planogram_type) -> (str):
     finally:
         client.delete_run(run_name, model_name)
 
+<<<<<<< HEAD
     print('\nrecognition_result : \n')
     print(recognition_result)
 
+=======
+>>>>>>> 39cb21033c2c1a9aed639d074fa8a589b7a5c2cd
     client = PlanogramComplianceClient(resource_type, resource_name, multi_service_endpoint, resource_key)
     matching_request = PlanogramMatchingRequest(recognition_result.result, planogram)
     matching_result = client.match_planogram(matching_request)

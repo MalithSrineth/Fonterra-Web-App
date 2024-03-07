@@ -97,6 +97,7 @@ document.getElementById('compareButton').addEventListener('click',  async functi
     formData.append('imageName', imageFile.name); // Assuming you also want to send the image name
     formData.append('planogramType', planogramType);
 
+<<<<<<< HEAD
     // const response = await fetch('http://127.0.0.1:5000/compare', {
     //         method: 'POST',
     //         body: formData,
@@ -104,6 +105,8 @@ document.getElementById('compareButton').addEventListener('click',  async functi
     // const data = await response.json();
     // console.log(data);
 
+=======
+>>>>>>> 39cb21033c2c1a9aed639d074fa8a589b7a5c2cd
     try {
         const response = await fetch('http://127.0.0.1:5000/compare', {
             method: 'POST',
@@ -113,8 +116,11 @@ document.getElementById('compareButton').addEventListener('click',  async functi
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
+<<<<<<< HEAD
         console.log("111111111111111111111111111111111111")
         console.log(data);
+=======
+>>>>>>> 39cb21033c2c1a9aed639d074fa8a589b7a5c2cd
         const accuracyData = data.accuracy[0];
         const resultsElement = document.getElementById('resultsDisplay');
         resultsElement.innerHTML = `

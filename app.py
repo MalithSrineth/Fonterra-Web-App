@@ -17,7 +17,11 @@ def home():
     return render_template('index.html')
 
 
+<<<<<<< HEAD
 app.config['UPLOAD_FOLDER'] = 'C:/Users/hp/Downloads/Fonterra WebApp/Flask Backend for MUI/Fonterra Web App/Fonterra Web App/static/Uploads'
+=======
+app.config['UPLOAD_FOLDER'] = 'C:/Users/malit/Documents/DXDY/Fonterra Web App/static/Uploads'
+>>>>>>> 39cb21033c2c1a9aed639d074fa8a589b7a5c2cd
 # app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit, for example
 
 def save_image(image, imageName):
@@ -80,6 +84,15 @@ def get_json():
     directory = "./"  # Update this path to where your JSON file is stored
     filename = "model_output.json"  # Update this to your JSON file's name
     return send_from_directory(directory, filename, as_attachment=True)
+<<<<<<< HEAD
+=======
+
+@app.route('/update_status', methods=['POST'])
+def update_status():
+    data = request.get_json()
+    print(data)
+    return jsonify(data)
+>>>>>>> 39cb21033c2c1a9aed639d074fa8a589b7a5c2cd
     
 @app.route('/')
 def hello_world():
