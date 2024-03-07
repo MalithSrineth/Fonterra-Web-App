@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#planogramDisplay, #resultsDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    min-height: 50px;
+}
+
+#cardsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.card, button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.cardLabel, .cardValue {
+    width: 100%;
+    text-align: center;
+}
+
+.cardLabel, button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.cardValue{
+    background-color: #ddd;
+    color: black;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px; /* Adjust as necessary for spacing */
+}
+
+button{
+    width: 20%;
+    cursor: pointer;
+    border: none; /* Removes default border styles */
+    outline: none; /* Removes the outline to focus states, consider custom focus styles for accessibility */
+    font-size: 1rem; /* Adjust as necessary */
+}
+
+
+.custom-dropdown {
+    position: relative;
+    background-color: #ddd;
+    border-radius: 3px;
+    padding: 10px 0px;
+    cursor: pointer;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-selected {
+    color: black;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between; /* This will push the arrow to the right */
+    align-items: center;
+}
+
+.dropdown-arrow {
+    /* Style as needed; here's a simple example */
+    margin-left: 5px; /* Adds some space between the text and the arrow */
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ddd;
+    border-radius: 3px;
+    display: none;
+    z-index: 10;
+}
+
+.dropdown-options div {
+    padding: 10px;
+    color: black;
+    text-align: left;
+    border-bottom: 1px solid #bbb; /* Optional: adds a separator between options */
+}
+
+.dropdown-options div:last-child {
+    border-bottom: none;
+}
+
+.dropdown-options div:hover {
+    background-color: #ccc;
+}
+

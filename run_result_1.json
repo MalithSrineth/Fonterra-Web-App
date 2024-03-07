@@ -1,0 +1,645 @@
+{
+    "imageMetadata": {
+        "width": 2907,
+        "height": 1909
+    },
+    "products": [
+        {
+            "id": "12",
+            "boundingBox": {
+                "x": 451,
+                "y": 91,
+                "w": 407,
+                "h": 491
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/1-3/200g",
+                    "confidence": 0.6132169365882874
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.32221266627311707
+                },
+                {
+                    "name": "Pediapro/1-3",
+                    "confidence": 0.002706368686631322
+                },
+                {
+                    "name": "Pediapro",
+                    "confidence": 0.0003726145369000733
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.0002669704845175147
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "boundingBox": {
+                "x": 450,
+                "y": 694,
+                "w": 410,
+                "h": 492
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.48404181003570557
+                },
+                {
+                    "name": "Pediapro/1-3/200g",
+                    "confidence": 0.45239073038101196
+                },
+                {
+                    "name": "Pediapro/1-3",
+                    "confidence": 0.00220576673746109
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0001974405167857185
+                },
+                {
+                    "name": "Ratthi/Normal/1kg",
+                    "confidence": 0.0001846437662607059
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "boundingBox": {
+                "x": 67,
+                "y": 693,
+                "w": 389,
+                "h": 482
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.8962047696113586
+                },
+                {
+                    "name": "Pediapro/Mama",
+                    "confidence": 0.0029312046244740486
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 8.105975575745106e-05
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 5.606732884189114e-05
+                },
+                {
+                    "name": "Anlene/400g",
+                    "confidence": 5.0984297558898106e-05
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "boundingBox": {
+                "x": 857,
+                "y": 88,
+                "w": 405,
+                "h": 497
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.721053957939148
+                },
+                {
+                    "name": "Pediapro/1-3/200g",
+                    "confidence": 0.1325092911720276
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.08299244195222855
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.0014358102343976498
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0007937105256132782
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "boundingBox": {
+                "x": 2428,
+                "y": 693,
+                "w": 400,
+                "h": 495
+            },
+            "tags": [
+                {
+                    "name": "Anchor/Non Fat/400g",
+                    "confidence": 0.6646995544433594
+                },
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.061809711158275604
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.056662362068891525
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.04138365015387535
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.036155615001916885
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "boundingBox": {
+                "x": 1259,
+                "y": 90,
+                "w": 404,
+                "h": 493
+            },
+            "tags": [
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.9377976059913635
+                },
+                {
+                    "name": "Anchor/Normal/400g",
+                    "confidence": 0.008671100251376629
+                },
+                {
+                    "name": "Pediapro/Cereal/250g",
+                    "confidence": 0.0021726202685385942
+                },
+                {
+                    "name": "Anchor/Non Fat/400g",
+                    "confidence": 0.0017217715503647923
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.0014343253569677472
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "boundingBox": {
+                "x": 856,
+                "y": 1297,
+                "w": 404,
+                "h": 493
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.714840292930603
+                },
+                {
+                    "name": "Pediapro/1-3/200g",
+                    "confidence": 0.1262405961751938
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.10389716923236847
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.0017209865618497133
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0010970702860504389
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "boundingBox": {
+                "x": 2429,
+                "y": 1292,
+                "w": 399,
+                "h": 502
+            },
+            "tags": [
+                {
+                    "name": "Anchor/Non Fat/400g",
+                    "confidence": 0.5674868226051331
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.10536044836044312
+                },
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.06917302310466766
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.030925527215003967
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.022267431020736694
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "boundingBox": {
+                "x": 2019,
+                "y": 1290,
+                "w": 409,
+                "h": 508
+            },
+            "tags": [
+                {
+                    "name": "Anlene/400g",
+                    "confidence": 0.467829167842865
+                },
+                {
+                    "name": "Anlene",
+                    "confidence": 0.4672852158546448
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.00022153471945784986
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.00011567601177375764
+                },
+                {
+                    "name": "Pediapro/3-5",
+                    "confidence": 7.254051160998642e-05
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "boundingBox": {
+                "x": 2430,
+                "y": 87,
+                "w": 398,
+                "h": 498
+            },
+            "tags": [
+                {
+                    "name": "Anchor/Non Fat/400g",
+                    "confidence": 0.5713080167770386
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.1072809100151062
+                },
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.06638228893280029
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.059180982410907745
+                },
+                {
+                    "name": "Pediapro/Cereal/250g",
+                    "confidence": 0.023864394053816795
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "boundingBox": {
+                "x": 1662,
+                "y": 1293,
+                "w": 356,
+                "h": 502
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/Cereal/250g",
+                    "confidence": 0.9196995496749878
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.010629530064761639
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.007622141856700182
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.004435453098267317
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0030522560700774193
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "boundingBox": {
+                "x": 856,
+                "y": 687,
+                "w": 405,
+                "h": 507
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.5053662657737732
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.2661854028701782
+                },
+                {
+                    "name": "Pediapro/1-3/200g",
+                    "confidence": 0.16991212964057922
+                },
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.005881262011826038
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0016005040379241109
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "boundingBox": {
+                "x": 1663,
+                "y": 689,
+                "w": 356,
+                "h": 500
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/Cereal/250g",
+                    "confidence": 0.9289660453796387
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.009118021465837955
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.005419421941041946
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.0030096732079982758
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0017757766181603074
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "boundingBox": {
+                "x": 2018,
+                "y": 86,
+                "w": 412,
+                "h": 499
+            },
+            "tags": [
+                {
+                    "name": "Anlene/400g",
+                    "confidence": 0.7034851908683777
+                },
+                {
+                    "name": "Anlene",
+                    "confidence": 0.24777312576770782
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.00023054117627907544
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.00015496558626182377
+                },
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.0001300396688748151
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "boundingBox": {
+                "x": 68,
+                "y": 1296,
+                "w": 388,
+                "h": 455
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.8913677930831909
+                },
+                {
+                    "name": "Pediapro/Mama",
+                    "confidence": 0.0029676391277462244
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 7.864101644372568e-05
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 6.4758954977151e-05
+                },
+                {
+                    "name": "Anlene/400g",
+                    "confidence": 4.309114956413396e-05
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "boundingBox": {
+                "x": 1663,
+                "y": 89,
+                "w": 356,
+                "h": 494
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/Cereal/250g",
+                    "confidence": 0.929922342300415
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.004960658960044384
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.00465349992737174
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.0022440191823989153
+                },
+                {
+                    "name": "Pediapro/Cereal",
+                    "confidence": 0.00195311417337507
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "boundingBox": {
+                "x": 68,
+                "y": 88,
+                "w": 387,
+                "h": 473
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 0.8983548283576965
+                },
+                {
+                    "name": "Pediapro/Mama",
+                    "confidence": 0.004267564974725246
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.0001356993889203295
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 6.644590030191466e-05
+                },
+                {
+                    "name": "Anlene/400g",
+                    "confidence": 3.902845855918713e-05
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "boundingBox": {
+                "x": 2019,
+                "y": 692,
+                "w": 412,
+                "h": 501
+            },
+            "tags": [
+                {
+                    "name": "Anlene/400g",
+                    "confidence": 0.47500866651535034
+                },
+                {
+                    "name": "Anlene",
+                    "confidence": 0.4737609028816223
+                },
+                {
+                    "name": "Other",
+                    "confidence": 0.00013193638005759567
+                },
+                {
+                    "name": "Pediapro/Mama/400g",
+                    "confidence": 4.4617052481044084e-05
+                },
+                {
+                    "name": "Anchor/Non Fat/400g",
+                    "confidence": 3.918337097275071e-05
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "boundingBox": {
+                "x": 451,
+                "y": 1297,
+                "w": 409,
+                "h": 494
+            },
+            "tags": [
+                {
+                    "name": "Pediapro/1-3/350g",
+                    "confidence": 0.5510450601577759
+                },
+                {
+                    "name": "Pediapro/1-3/200g",
+                    "confidence": 0.384357750415802
+                },
+                {
+                    "name": "Pediapro/1-3",
+                    "confidence": 0.002155391499400139
+                },
+                {
+                    "name": "Pediapro/3-5/350g",
+                    "confidence": 0.0002257559244753793
+                },
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.0001962378155440092
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "boundingBox": {
+                "x": 1261,
+                "y": 1299,
+                "w": 401,
+                "h": 490
+            },
+            "tags": [
+                {
+                    "name": "Anchor/Plus 1-5/400g",
+                    "confidence": 0.9182494878768921
+                },
+                {
+                    "name": "Anchor/Normal/400g",
+                    "confidence": 0.008507456630468369
+                },
+                {
+                    "name": "Pediapro/3-5/200g",
+                    "confidence": 0.0013396231224760413
+                },
+                {
+                    "name": "Pediapro/Cereal/250g",
+                    "confidence": 0.0012976720463484526
+                },
+                {
+                    "name": "Anchor/Non Fat/400g",
+                    "confidence": 0.0012645855313166976
+                }
+            ]
+        }
+    ],
+    "gaps": [
+        {
+            "id": "21",
+            "boundingBox": {
+                "x": 1270,
+                "y": 619,
+                "w": 385,
+                "h": 573
+            },
+            "tags": [
+                {
+                    "name": "gap",
+                    "confidence": 0.828213632106781
+                }
+            ]
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-print("Importing Run module")
-
 def gold(input_file, planogram_type) -> str:
     import json
     import logging
@@ -31,11 +29,14 @@ def gold(input_file, planogram_type) -> str:
     resource_key = '882311aa18cf43e58fe25901b28e018e'
 
     planogram = json.load(open(f'../../Resources/Planograms/JSONs/{planogram_type}', 'r'))
+    print("\nPlanogram Loaded Successfully.")
 
     client = ProductRecognitionClient(resource_type, resource_name, multi_service_endpoint, resource_key)
     run_name = str(uuid.uuid4())
     # model_name = 'ms-pretrained-product-detection'
     model_name = 'fonterramodel01'
+
+    print("\nModel is Running...\n")
     run = ProductRecognition(run_name, model_name)
 
     with open(f'../Uploads/{input_file}', 'rb') as f:
@@ -54,4 +55,5 @@ def gold(input_file, planogram_type) -> str:
     cv_img = cv2.imdecode(np.frombuffer(img, np.uint8), cv2.IMREAD_COLOR)
     cv_img, json_out = visualize_matching_result(cv_img, matching_result.to_dict(), planogram)
 
+    cv2.imwrite(f'../Outputs/matching_result.jpg', cv_img)
     return json_out

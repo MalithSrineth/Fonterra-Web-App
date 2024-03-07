@@ -1,0 +1,139 @@
+{
+    "accuracy": [
+        {
+            "accuracy": 52.4,
+            "total": 21,
+            "matched_count": 11,
+            "missing_count": 1,
+            "misplaced_count": 9
+        }
+    ],
+    "other": [
+        {
+            "label": "Matched Product",
+            "positionId": "0001",
+            "expectedProduct": "Pediapro/Mama/400g",
+            "foundProduct": "Pediapro/Mama/400g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0002",
+            "expectedProduct": "Pediapro/1-2/350g",
+            "foundProduct": "Pediapro/1-3/350g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0003",
+            "expectedProduct": "Pediapro/2-5/350g",
+            "foundProduct": "Pediapro/3-5/200g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0004",
+            "expectedProduct": "Anchor/Plus 1-5/400g",
+            "foundProduct": "Anchor/Plus 1-5/400g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0005",
+            "expectedProduct": "Pediapro/Cereal/250g",
+            "foundProduct": "Pediapro/Cereal/250g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0006",
+            "expectedProduct": "Anlene/400g",
+            "foundProduct": "Anlene/400g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0007",
+            "expectedProduct": "Anchor/Shape Up",
+            "foundProduct": "Anchor/Non Fat/400g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0008",
+            "expectedProduct": "Pediapro/Mama/400g",
+            "foundProduct": "Pediapro/Mama/400g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0009",
+            "expectedProduct": "Pediapro/1-2/350g",
+            "foundProduct": "Pediapro/1-3/350g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0010",
+            "expectedProduct": "Pediapro/2-5/350g",
+            "foundProduct": "Pediapro/3-5/200g"
+        },
+        {
+            "label": "Missing Product",
+            "positionId": "0011",
+            "expectedProduct": "Anchor/Plus 1-5/400g",
+            "foundProduct": "gap"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0012",
+            "expectedProduct": "Pediapro/Cereal/250g",
+            "foundProduct": "Pediapro/Cereal/250g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0013",
+            "expectedProduct": "Anlene/400g",
+            "foundProduct": "Anlene/400g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0014",
+            "expectedProduct": "Anchor/Shape Up",
+            "foundProduct": "Anchor/Non Fat/400g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0015",
+            "expectedProduct": "Pediapro/Mama/400g",
+            "foundProduct": "Pediapro/Mama/400g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0016",
+            "expectedProduct": "Pediapro/1-2/350g",
+            "foundProduct": "Pediapro/1-3/200g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0017",
+            "expectedProduct": "Pediapro/2-5/350g",
+            "foundProduct": "Pediapro/3-5/200g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0018",
+            "expectedProduct": "Anchor/Plus 1-5/400g",
+            "foundProduct": "Anchor/Plus 1-5/400g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0019",
+            "expectedProduct": "Pediapro/Cereal/250g",
+            "foundProduct": "Pediapro/Cereal/250g"
+        },
+        {
+            "label": "Matched Product",
+            "positionId": "0020",
+            "expectedProduct": "Anlene/400g",
+            "foundProduct": "Anlene/400g"
+        },
+        {
+            "label": "Misplaced Product",
+            "positionId": "0021",
+            "expectedProduct": "Anchor/Shape Up",
+            "foundProduct": "Anchor/Non Fat/400g"
+        }
+    ]
+}

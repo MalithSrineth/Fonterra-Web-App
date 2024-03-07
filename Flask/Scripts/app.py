@@ -1,14 +1,21 @@
 from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
+from threading import Thread
 import os
 import run
 
 app = Flask(__name__)
 CORS(app)
 
+
 app.config['UPLOAD_FOLDER'] = 'C:/Users/malit/Documents/DXDY/Fonterra Web App/Flask/Uploads'
 # app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit, for example
+
+def save_image(image, imageName):
+    filepath = os.path.join(app.config['UPLOAD_FOLDER'], imageName)
+    image.save(filepath)
+    print(f"\nImage {imageName} Saved Successfully.")
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -31,7 +38,11 @@ def get_json_files():
     files = [f for f in os.listdir(directory) if f.endswith('.json')]
     return jsonify(files)
 
-@app.route('/compare', methods=['POST', 'GET'])
+@app.route('/compare2', methods=['POST'])
+def compare_images2():
+    return jsonify ("Hello World!")
+
+@app.route('/compare', methods=['POST'])
 def compare_images():
     if 'image' not in request.files:
         return jsonify({'error': 'No image file provided'}), 400
@@ -44,12 +55,13 @@ def compare_images():
         return jsonify({'error': 'No selected file'})
     if image:
         # filename = secure_filename(imageName)
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], imageName)
-        image.save(filepath)
+        # filepath = os.path.join(app.config['UPLOAD_FOLDER'], imageName)
+        # image.save(filepath)
+        thread = Thread(target=save_image, args=(image, imageName))
+        thread.start()
 
         model_output = run.gold(imageName, planogramType)
-        print(model_output)
-        return jsonify(model_output), 200
+        return model_output, 200
     
     else:
         return jsonify({'error': 'An error occurred'}), 500
