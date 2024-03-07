@@ -1,4 +1,6 @@
-def gold(input_file, planogram_type) -> str:
+import numpy as np
+
+def gold(input_file, planogram_type) -> (str): 
     import json
     import logging
     import uuid
@@ -6,7 +8,6 @@ def gold(input_file, planogram_type) -> str:
 
     import cv2
     import numpy as np
-    from PIL import Image
 
     from cognitive_service_vision_model_customization_python_samples import ResourceType
     from cognitive_service_vision_model_customization_python_samples.clients import PlanogramComplianceClient, ProductRecognitionClient
@@ -28,7 +29,7 @@ def gold(input_file, planogram_type) -> str:
 
     resource_key = '882311aa18cf43e58fe25901b28e018e'
 
-    planogram = json.load(open(f'../../Resources/Planograms/JSONs/{planogram_type}', 'r'))
+    planogram = json.load(open(f'static/Resources/Planograms/JSONs/{planogram_type}', 'r'))
     print("\nPlanogram Loaded Successfully.")
 
     client = ProductRecognitionClient(resource_type, resource_name, multi_service_endpoint, resource_key)
@@ -39,7 +40,7 @@ def gold(input_file, planogram_type) -> str:
     print("\nModel is Running...\n")
     run = ProductRecognition(run_name, model_name)
 
-    with open(f'../Uploads/{input_file}', 'rb') as f:
+    with open(f'static/Uploads/{input_file}', 'rb') as f:
         img = f.read()
 
     try:
@@ -53,7 +54,7 @@ def gold(input_file, planogram_type) -> str:
     matching_result = client.match_planogram(matching_request)
 
     cv_img = cv2.imdecode(np.frombuffer(img, np.uint8), cv2.IMREAD_COLOR)
-    cv_img, json_out = visualize_matching_result(cv_img, matching_result.to_dict(), planogram)
+    json_out = visualize_matching_result(cv_img, matching_result.to_dict(), planogram)
 
-    cv2.imwrite(f'../Outputs/matching_result.jpg', cv_img)
+    # cv2.imwrite(f'C:/Users/malit/Documents/DXDY/web-app-mui/public/matching_result.jpg', cv_img)
     return json_out

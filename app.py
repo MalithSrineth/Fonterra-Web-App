@@ -1,4 +1,8 @@
-from flask import Flask, request, jsonify, send_from_directory
+import base64
+import io
+from PIL import Image
+import cv2
+from flask import Flask, request, jsonify, send_from_directory, render_template
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 from threading import Thread
@@ -8,8 +12,12 @@ import run
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-app.config['UPLOAD_FOLDER'] = 'C:/Users/malit/Documents/DXDY/Fonterra Web App/Flask/Uploads'
+
+app.config['UPLOAD_FOLDER'] = 'C:/Users/malit/Documents/DXDY/Fonterra Web App/static/Uploads'
 # app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit, for example
 
 def save_image(image, imageName):
@@ -34,7 +42,7 @@ def upload_file():
     
 @app.route('/get-json-files', methods=['GET'])
 def get_json_files():
-    directory = r'../../Resources/Planograms/JSONs'
+    directory = r'static/Resources/Planograms/JSONs'
     files = [f for f in os.listdir(directory) if f.endswith('.json')]
     return jsonify(files)
 
@@ -61,6 +69,7 @@ def compare_images():
         thread.start()
 
         model_output = run.gold(imageName, planogramType)
+
         return model_output, 200
     
     else:
@@ -71,6 +80,12 @@ def get_json():
     directory = "./"  # Update this path to where your JSON file is stored
     filename = "model_output.json"  # Update this to your JSON file's name
     return send_from_directory(directory, filename, as_attachment=True)
+
+@app.route('/update_status', methods=['POST'])
+def update_status():
+    data = request.get_json()
+    print(data)
+    return jsonify(data)
     
 @app.route('/')
 def hello_world():

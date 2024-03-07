@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planogram App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="section1">
+    <!-- Modified to include form for upload -->
+    <form id="uploadForm">
+        <input type="file" id="imageUpload" name="image" accept="image/*"/>
+        <button type="submit">Upload</button>
+    </form>
+    <br/>
+    <img id="displayImage" src="" alt="Uploaded Image Will Display Here" style="display:none;"/>
+</div>
+
+<div id="section2">
+
+    <div class="custom-dropdown" id="planogramSelect">
+        <div class="dropdown-selected"><span class="selected-text">Select an option</span><span class="dropdown-arrow">&#9662;</span></div>
+        <div class="dropdown-options">
+            <!-- Options will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <!-- <select class="custom-select" id="planogramSelect">
+        <option value="" disabled selected hidden>Select an option</option>
+        
+    </select> -->
+    <div id="planogramDisplay">Planogram Info Will Display Here</div>
+</div>
+
+<div id="section3">
+    <button type="button" id="compareButton">Compare</button>
+    <div id="resultsDisplay">Results Will Display Here</div>
+    <div id="cardsContainer">
+        <div class="card">
+            <div class="cardLabel">Accuracy</div>
+            <div class="cardValue">0%</div>
+        </div>
+        <div class="card">
+            <div class="cardLabel">Total</div>
+            <div class="cardValue">0</div>
+        </div>
+        <div class="card">
+            <div class="cardLabel">Matched Count</div>
+            <div class="cardValue">0</div>
+        </div>
+        <div class="card">
+            <div class="cardLabel">Missing Count</div>
+            <div class="cardValue">0</div>
+        </div>
+        <div class="card">
+            <div class="cardLabel">Misplaced Count</div>
+            <div class="cardValue">0</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
